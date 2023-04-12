@@ -19,10 +19,15 @@ end}
 
 
 library.Playerlist:Label{name = "Cash: ", handler = function(plr)
-   local playersService = game:GetService("Players")
+  -- Get the Players service
+local playersService = game:GetService("Players")
+
+-- Get all players in the game
 local players = playersService:GetPlayers()
+
+-- Loop through the players and print their names
 for i, player in ipairs(players) do
-    return players.Information.Cash.Value
+    return player.Information.Cash.Value
 end
 end}
 
