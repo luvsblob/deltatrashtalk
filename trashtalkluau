@@ -2,7 +2,7 @@ local library = loadstring(game:HttpGet("https://github.com/WetCheezit/UI-Libs/b
 local window = library:Load{playerlist = true};
 local plrs = game:GetService("Players"):GetPlayers();
 
-print(plrs.Information.Cash)
+print(plrs.Information:WaitForChild("Cash"))
 
 library.Playerlist:button{name = "Prioritize", callback = function(list, plr)
     if not list:IsTagged(plr, "Prioritized") then
