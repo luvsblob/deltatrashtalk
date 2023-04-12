@@ -17,12 +17,8 @@ library.Playerlist:button{name = "Ignore", callback = function(list, plr)
     end
 end}
 
-library.Playerlist:Label{name = "Rank: ", handler = function(plr)
-    return "1e+9"
-end}
-
-library.Playerlist:Label{name = "Team: ", handler = function(plr)
-    return "Ghosts", fromRGB(209, 118, 0)
+library.Playerlist:Label{name = "Cash: ", handler = function(plr)
+    return plr.Information.Cash
 end}
 
 local watermark = library:Watermark("exodus | dev | test | 2.3b fps")
